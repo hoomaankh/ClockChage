@@ -1,0 +1,6 @@
+#!/bin/bash
+service httpd start
+echo -e 'ZONE=\"Australia/Victoria\"\nUTC=true' > /etc/sysconfig/clock
+reboot
+
+
