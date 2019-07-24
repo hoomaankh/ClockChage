@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /etc/sysconfig/clock
+    destination: /etc/sysconfig/clock.backup
+files:
+  - source: /clock
+    destination: /etc/sysconfig/
+hooks:
+  ApplicationStop:
+    - location: scripts/restart
+      timeout: 300
+      runas: root
+
